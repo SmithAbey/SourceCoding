@@ -1,0 +1,19 @@
+*    PSEUDOCODE
+1    Initialize the dictionary
+2    prev= ""
+3    seq=""
+4    decoded message=""
+5    WHILE not end of input stream
+6       IF input code > length of the dictionary
+7		temp = previous input code
+8		seq=prev+temp(1)
+9        	IF seq is not in the dictionary
+10               	seq add to the dictionary
+11      ELSE
+12              temp = input code
+13		seq=prev+temp(1)
+14       	IF seq is not in the dictionary
+15              	seq add to the dictionary
+16       Add dictionary(input code) to decode message
+17       prev = input code
+18    END WHILE

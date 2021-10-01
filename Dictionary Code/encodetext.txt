@@ -1,0 +1,13 @@
+  *     PSEUDOCODE
+  1     Initialize dictionary
+  2     temp = first input character
+  3     WHILE not end of input stream
+  4          next_char = next input character
+  5          IF temp + next_char is in the dictionary
+  6            temp = temp + next_char
+  7          ELSE
+  8            output the code for temp
+  9            add temp + next_char to the dictionary
+  10           temp = next_char
+  11         END WHILE
+  12    output code for temp

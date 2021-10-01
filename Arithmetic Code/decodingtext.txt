@@ -1,0 +1,19 @@
+*    PSEUDOCODE
+1    Encoded Message
+2    Decoded Message=[]
+3    CDF
+4    l=0
+5    u=1
+6    First wordlength bits taken as tag from Encoded Message
+7    WHILE not end of input stream
+8       Calculate corresponding tag value for the given interval and decode the symbol
+9	Add decoded symbol to the Decoded Message
+10	Update l and u
+11       WHILE scaling required
+12      	E1 Scaling:Update l and u for u<0.5
+13      		   Shift tag to the left and read next bit from Encoded Message for the LSB
+14      	E2 Scaling:Update l and u for l>0.5
+15      		   Shift tag to the left and read next bit from Encoded Message for the LSB
+16      	E3 Scaling:Update l and u for l>0.25 and u<0.75
+17      		   Shift tag to the left and read next bit from Encoded Message and swap the bit value of MSB
+18    END WHILE
